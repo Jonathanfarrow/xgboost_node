@@ -1,0 +1,54 @@
+{
+  "name": "xgboost_node",
+  "version": "1.0.0",
+  "description": "Node.js bindings for XGBoost (Linux only)",
+  "type": "module",
+  "main": "dist/lib/xgboost.js",
+  "types": "dist/lib/xgboost.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "src",
+    "binding.gyp",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "install": "node-gyp rebuild",
+    "build": "npm run clean && tsc",
+    "test": "node dist/test/test.js",
+    "test:air": "node dist/test/testair.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "node-addon-api": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "node-gyp": "^9.0.0",
+    "rimraf": "^5.0.10",
+    "typescript": "^5.6.3"
+  },
+  "os": [
+    "linux"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "gypfile": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/xgboost-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/xgboost-node/issues"
+  },
+  "homepage": "https://github.com/yourusername/xgboost-node#readme",
+  "keywords": [
+    "xgboost",
+    "machine-learning",
+    "native",
+    "binding",
+    "linux"
+  ]
+}

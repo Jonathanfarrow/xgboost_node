@@ -39,4 +39,4 @@ console.log('Predicted price:', predictions[0]);
 ### train(features: number[][], labels: number[], params: object)
 ### predict(features: number[][])
 ### saveModel(path: string)
-### loadModel(path: string)
+### loadModel(path: string)# xgboost_node
