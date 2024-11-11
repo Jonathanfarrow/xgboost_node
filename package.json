@@ -1,6 +1,6 @@
 {
   "name": "xgboost_node",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Node.js bindings for XGBoost (Linux only)",
   "type": "module",
   "main": "dist/lib/xgboost.js",
@@ -21,6 +21,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
+    "@changesets/cli": "^2.27.9",
     "node-addon-api": "^5.1.0"
   },
   "devDependencies": {
@@ -31,6 +32,9 @@
   },
   "os": [
     "linux"
+  ],
+  "cpu": [
+    "x64"
   ],
   "engines": {
     "node": ">=14.0.0"
