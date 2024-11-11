@@ -1,0 +1,9 @@
+.git/
+.github/
+.vscode/
+node_modules/
+test/
+build/temp/
+*.log
+.gitignore
+tsconfig.json 
