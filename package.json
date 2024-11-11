@@ -13,7 +13,7 @@
     "README.md"
   ],
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "npx rimraf dist",
     "install": "node-gyp rebuild",
     "build": "npm run clean && tsc",
     "test": "node dist/test/test.js",
