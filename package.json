@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "clean": "npx rimraf dist",
-    "install": "node-gyp rebuild",
+    "rebuild": "node-gyp rebuild",
     "build": "npm run clean && tsc",
     "test": "node dist/test/test.js",
     "test:air": "node dist/test/testair.js",
