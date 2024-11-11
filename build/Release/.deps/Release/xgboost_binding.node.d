@@ -1,1 +1,0 @@
-cmd_Release/xgboost_binding.node := ln -f "Release/obj.target/xgboost_binding.node" "Release/xgboost_binding.node" 2>/dev/null || (rm -rf "Release/xgboost_binding.node" && cp -af "Release/obj.target/xgboost_binding.node" "Release/xgboost_binding.node")
