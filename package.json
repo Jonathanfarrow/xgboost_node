@@ -1,6 +1,6 @@
 {
   "name": "xgboost_node",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Node.js bindings for XGBoost (Linux only)",
   "type": "module",
   "main": "dist/lib/xgboost.js",
@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "clean": "npx rimraf dist",
-    "rebuild": "node-gyp rebuild",
+    "rebuild-native": "node-gyp rebuild",
     "build": "npm run clean && tsc",
     "test": "node dist/test/test.js",
     "test:air": "node dist/test/testair.js",

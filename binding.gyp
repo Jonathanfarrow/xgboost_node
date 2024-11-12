@@ -9,7 +9,7 @@
         ],
         "libraries": [
           "-L<(module_root_dir)/lib",
-          "-Wl,-rpath,'$$ORIGIN/../../lib'",
+          "-Wl,-rpath,'$$ORIGIN'",
           "-lxgboost"
         ],
         "dependencies": [
