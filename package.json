@@ -1,6 +1,6 @@
 {
   "name": "xgboost_node",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Node.js bindings for XGBoost (Linux only)",
   "type": "module",
   "main": "dist/lib/xgboost.js",
@@ -8,10 +8,11 @@
   "files": [
     "dist/**/*",
     "lib/**/*",
+    "lib/libxgboost.so",
+    "lib/xgboost_binding.node",
     "src/**/*",
     "binding.gyp",
-    "README.md",
-    "build/Release/xgboost_binding.node"
+    "README.md"
   ],
   "scripts": {
     "clean": "npx rimraf dist",
