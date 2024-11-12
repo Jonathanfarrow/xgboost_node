@@ -13,7 +13,7 @@ const libPath = path.resolve(__dirname, '../../lib');
 process.env.LD_LIBRARY_PATH = `${libPath}:${process.env.LD_LIBRARY_PATH || ''}`;
 
 // Fix: Go up two levels from dist/lib to reach project root
-const modulePath = path.resolve(__dirname, '../../build/Release/xgboost_binding.node');
+const modulePath = path.resolve(__dirname, './xgboost_binding.node');
 console.log('Loading native module from:', modulePath);
 
 // Import native module
