@@ -20,7 +20,7 @@
     "test": "node dist/test/test.js",
     "test:air": "node dist/test/testair.js",
     "prepare": "npm run build",
-    "release": "changeset publish",
+    "release": "changeset publish"
    
   },
   "dependencies": {
