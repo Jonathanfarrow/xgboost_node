@@ -12,8 +12,8 @@ const customRequire = createRequire(import.meta.url);
 const libPath = path.resolve(__dirname, '../../lib');
 process.env.LD_LIBRARY_PATH = `${libPath}:${process.env.LD_LIBRARY_PATH || ''}`;
 
-// Fix: Go up two levels from dist/lib to reach project root
-const modulePath = path.resolve(__dirname, './xgboost_binding.node');
+// Load native module from the lib directory (same as libxgboost.so)
+const modulePath = path.resolve(libPath, 'xgboost_binding.node');
 console.log('Loading native module from:', modulePath);
 
 // Import native module
