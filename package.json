@@ -6,11 +6,12 @@
   "main": "dist/lib/xgboost.js",
   "types": "dist/lib/xgboost.d.ts",
   "files": [
-    "dist",
-    "lib",
-    "src",
+    "dist/**/*",
+    "lib/**/*",
+    "src/**/*",
     "binding.gyp",
-    "README.md"
+    "README.md",
+    "build/**/*"
   ],
   "scripts": {
     "clean": "npx rimraf dist",
@@ -19,7 +20,8 @@
     "test": "node dist/test/test.js",
     "test:air": "node dist/test/testair.js",
     "prepare": "npm run build",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "install": "node-gyp rebuild"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
@@ -43,12 +45,12 @@
   "gypfile": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jonathanfarrow/xgboost-node.git"
+    "url": "git+https://github.com/Jonathanfarrow/xgboost_node.git"
   },
   "bugs": {
-    "url": "https://github.com/Jonathanfarrow/xgboost-node/issues"
+    "url": "https://github.com/Jonathanfarrow/xgboost_node/issues"
   },
-  "homepage": "https://github.com/Jonathanfarrow/xgboost-node#readme",
+  "homepage": "https://github.com/Jonathanfarrow/xgboost_node#readme",
   "keywords": [
     "xgboost",
     "machine-learning",
