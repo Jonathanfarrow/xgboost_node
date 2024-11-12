@@ -21,7 +21,7 @@
     "test:air": "node dist/test/testair.js",
     "prepare": "npm run build",
     "release": "changeset publish",
-    "install": "node-gyp rebuild"
+   
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
