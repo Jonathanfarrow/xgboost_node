@@ -25,13 +25,13 @@ Fast, native Node.js bindings for XGBoost (Linux only)
 
 ## Installation
 ```bash
-npm install xgboost-node
+npm install xgboost_node
 ```
 
 ## Quick Start
 
 ```typescript
-import xgboost from 'xgboost-node';
+import xgboost from 'xgboost_node';
 
 // Training example
 const features = [
