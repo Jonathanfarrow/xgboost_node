@@ -1,6 +1,6 @@
 {
   "name": "xgboost_node",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Node.js bindings for XGBoost (Linux only)",
   "type": "module",
   "main": "dist/lib/xgboost.js",
@@ -12,7 +12,8 @@
     "lib/xgboost_binding.node",
     "src/**/*",
     "scripts/**/*",
-    "binary/**/*", 
+    "binary/**/*",
+    "deps/**/*",
     "binding.gyp",
     "README.md"
   ],
