@@ -9,13 +9,12 @@
           "deps/xgboost-1.7.5/dmlc-core/include",
           "deps/xgboost-1.7.5/rabit/include"
         ],
-        "libraries": [
-          "-L<(module_root_dir)/lib",
-          "-Wl,-rpath,'$$ORIGIN'",
-          "-lxgboost"
-        ],
         "conditions": [
           ['OS=="mac"', {
+            "libraries": [
+              "-L<(module_root_dir)/lib",
+              "-lxgboost"
+            ],
             "xcode_settings": {
               "GCC_ENABLE_CPP_EXCEPTIONS": "YES",
               "MACOSX_DEPLOYMENT_TARGET": "10.15",
@@ -26,7 +25,9 @@
           }],
           ['OS=="linux"', {
             "libraries": [
-              "-Wl,-rpath,'$$ORIGIN'"
+              "-L<(module_root_dir)/lib",
+              "-Wl,-rpath,'$$ORIGIN'",
+              "-lxgboost"
             ]
           }]
         ],
