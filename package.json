@@ -26,8 +26,7 @@
     "test:air": "node dist/test/testair.js",
     "prepare": "git submodule update --init --recursive && npm run build",
     "release": "changeset publish",
-    "install": "npm run osdetect && node-gyp rebuild"
-   
+    "install": "npm run osdetect && node-gyp rebuild && cp build/Release/xgboost_binding.node lib/"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
