@@ -5,7 +5,9 @@
         "sources": [ "src/binding.cc" ],
         "include_dirs": [
           "<!@(node -p \"require('node-addon-api').include\")",
-          "deps/xgboost-1.7.5/include"
+          "deps/xgboost-1.7.5/include",
+          "deps/xgboost-1.7.5/dmlc-core/include",
+          "deps/xgboost-1.7.5/rabit/include"
         ],
         "libraries": [
           "-L<(module_root_dir)/lib",
