@@ -18,11 +18,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
       
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: "npm"
+
+      - name: Debug - Check XGBoost files
+        run: |
+          ls -la deps/xgboost-1.7.5/include/xgboost/
+          cat deps/xgboost-1.7.5/include/xgboost/c_api.h | head -n 5
 
       - run: npm install --frozen-lockfile
       - name: Create Release Pull Request or Publish
