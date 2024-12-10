@@ -24,7 +24,7 @@
     "build": "npm run clean && tsc",
     "test": "node dist/test/test.js",
     "test:air": "node dist/test/testair.js",
-    "prepare": "npm run build",
+    "prepare": "git submodule update --init --recursive && npm run build",
     "release": "changeset publish",
     "install": "npm run osdetect && node-gyp rebuild"
    

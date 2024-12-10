@@ -7,3 +7,6 @@ build/temp/
 *.log
 .gitignore
 tsconfig.json 
+deps/xgboost-1.7.5/*
+!deps/xgboost-1.7.5/include
+!deps/xgboost-1.7.5/include/**/* 
