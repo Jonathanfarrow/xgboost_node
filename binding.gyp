@@ -12,6 +12,22 @@
           "-Wl,-rpath,'$$ORIGIN'",
           "-lxgboost"
         ],
+        "conditions": [
+          ['OS=="mac"', {
+            "xcode_settings": {
+              "GCC_ENABLE_CPP_EXCEPTIONS": "YES",
+              "MACOSX_DEPLOYMENT_TARGET": "10.15",
+              "OTHER_LDFLAGS": [
+                "-Wl,-rpath,@loader_path"
+              ]
+            }
+          }],
+          ['OS=="linux"', {
+            "libraries": [
+              "-Wl,-rpath,'$$ORIGIN'"
+            ]
+          }]
+        ],
         "dependencies": [
           "<!(node -p \"require('node-addon-api').gyp\")"
         ],

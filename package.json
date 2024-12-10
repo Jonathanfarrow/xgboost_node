@@ -1,6 +1,6 @@
 {
   "name": "xgboost_node",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Node.js bindings for XGBoost (Linux only)",
   "type": "module",
   "main": "dist/lib/xgboost.js",
@@ -25,7 +25,7 @@
     "test:air": "node dist/test/testair.js",
     "prepare": "npm run build",
     "release": "changeset publish",
-    "install": "npm run osdetect"
+    "install": "npm run osdetect && node-gyp rebuild"
    
   },
   "dependencies": {
@@ -47,9 +47,10 @@
      "arm64"
   ],
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.0.0",
+    "python": ">=3.7.0"
   },
-  "gypfile": false,
+  "gypfile": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jonathanfarrow/xgboost_node.git"
@@ -65,4 +66,5 @@
     "binding",
     "linux"
   ]
+ 
 }
