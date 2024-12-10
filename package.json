@@ -11,11 +11,12 @@
     "lib/libxgboost.so",
     "lib/xgboost_binding.node",
     "src/**/*",
+    "scripts/**/*",
     "binding.gyp",
     "README.md"
   ],
   "scripts": {
-    "osdetect": "node scripts/OSDetect.js",
+    "osdetect": "node ./scripts/OSDetect.js",
     "clean": "npx rimraf dist",
     "rebuild-native": "node-gyp rebuild",
     "build": "npm run clean && tsc",
