@@ -27,7 +27,8 @@
     "test:air": "node dist/test/testair.js",
     "prepare": "git submodule update --init --recursive && npm run build",
     "release": "changeset publish",
-    "install": "npm run osdetect && node-gyp rebuild && npm run copy-binary"  },
+    "install": "npm run osdetect && node ./scripts/ConditionalBuild.js"
+  },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
     "node-addon-api": "^5.1.0",
