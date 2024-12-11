@@ -1,6 +1,6 @@
 {
   "name": "xgboost_node",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Node.js bindings for XGBoost (Linux only)",
   "type": "module",
   "main": "dist/lib/xgboost.js",
@@ -18,6 +18,7 @@
     "README.md"
   ],
   "scripts": {
+    "copy-binary": "node ./scripts/CopyBinary.js",
     "osdetect": "node ./scripts/OSDetect.js",
     "clean": "npx rimraf dist",
     "rebuild-native": "node-gyp rebuild",
@@ -26,15 +27,14 @@
     "test:air": "node dist/test/testair.js",
     "prepare": "git submodule update --init --recursive && npm run build",
     "release": "changeset publish",
-    "install": "npm run osdetect && node-gyp rebuild && cp build/Release/xgboost_binding.node lib/"
-  },
+    "install": "npm run osdetect && node-gyp rebuild && npm run copy-binary"  },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
-    "node-addon-api": "^5.1.0"
+    "node-addon-api": "^5.1.0",
+    "node-gyp": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "node-gyp": "^9.0.0",
     "rimraf": "^5.0.10",
     "typescript": "^5.6.3"
   },
