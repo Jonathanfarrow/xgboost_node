@@ -9,7 +9,7 @@
 
 # XGBoost Node
 
-Fast, native Node.js bindings for XGBoost (Linux only)
+Fast, native Node.js bindings for XGBoost (Linux & MAC)
 
 ## Features
 - 🚀 Native C++ bindings for maximum performance
