@@ -67,6 +67,13 @@ async function testFlightPricePredictor() {
                        `Weekend=${testFlights[index][5] ? 'Yes' : 'No'}`);
         });
 
+        const featureImportance = await xgboost.getFeatureImportance('weight');
+        console.log("Feature Importance:", featureImportance);
+        const featureNames = ['distance', 'departure_time', 'arrival_time', 'stops', 'airline_code', 'is_weekend'];
+        featureImportance.forEach((importance, index) => {
+            console.log(`${featureNames[index]}: ${importance}`);
+        });
+
     } catch (error) {
         console.error("Error during flight price prediction:", error);
     }

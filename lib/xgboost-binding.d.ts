@@ -5,5 +5,6 @@ declare module '*xgboost_binding.node' {
         predict(features: number[][]): Promise<number[]>;
         train(features: number[][], labels: number[], params: object): Promise<boolean>;
         saveModel(path: string): boolean;
+        getFeatureImportance(importanceType: string): Promise<number[]>;
     }
 } 

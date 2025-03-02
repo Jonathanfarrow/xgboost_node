@@ -16,6 +16,7 @@ public:
             InstanceMethod("predict", &XGBoostBinding::Predict),
             InstanceMethod("train", &XGBoostBinding::Train),
             InstanceMethod("saveModel", &XGBoostBinding::SaveModel),
+            InstanceMethod("getFeatureImportance", &XGBoostBinding::GetFeatureImportance),
         });
 
         constructor = Napi::Persistent(func);
@@ -149,6 +150,31 @@ public:
         std::string path = info[0].As<Napi::String>();
         bool success = xgboost->SaveModel(path);
         return Napi::Boolean::New(env, success);
+    }
+
+    Napi::Value GetFeatureImportance(const Napi::CallbackInfo& info) {
+        Napi::Env env = info.Env();
+        
+        std::string importance_type = "gain";
+        if (info.Length() > 0 && info[0].IsString()) {
+            importance_type = info[0].As<Napi::String>().Utf8Value();
+        }
+        
+        std::vector<float> importance = xgboost->GetFeatureImportance(importance_type);
+        
+        // Create a JavaScript array with the correct size
+        Napi::Array result = Napi::Array::New(env, importance.size());
+        
+        // Fill the array with values
+        for (size_t i = 0; i < importance.size(); i++) {
+            result[i] = Napi::Number::New(env, importance[i]);
+        }
+        
+        return result;
+    }
+
+    XGBoostWrapper* GetInternalInstance() {
+        return xgboost.get();
     }
 };
 

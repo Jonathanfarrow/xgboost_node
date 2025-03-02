@@ -156,7 +156,26 @@ class XGBoostModel {
       throw new Error(`Failed to save model to ${path}`);
     }
   }
-}
+
+
+  /**
+   * Get feature importance scores for the trained model
+   * @param importanceType - Type of feature importance to calculate
+   * @returns Promise resolving to array of feature importance scores
+   * @throws {Error} if no model is loaded
+   */
+  async getFeatureImportance(importanceType: string): Promise<number[]> {
+    if (!this.modelLoaded) {
+      throw new Error("Model not loaded. Please load a model before getting feature importance.");
+    }
+
+    return binding.getFeatureImportance(importanceType);
+  }
+  }
+
+
+
+
 
 // Define parameter interface
 export interface XGBoostParameters {
