@@ -19,7 +19,7 @@ Fast, native Node.js bindings for XGBoost (Linux & MAC)
 - 🐧 Linux support (more platforms coming soon)
 
 ## Prerequisites
-- Linux OS
+- Linux OS or Mac OS
 - Node.js >= 14.0.0  
 - GCC/G++ compiler
 
