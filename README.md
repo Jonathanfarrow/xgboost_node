@@ -35,8 +35,11 @@ import xgboost from 'xgboost_node';
 
 // Training example
 const features = [
-    [1200, 8, 10, 0, 1, 1],  // Example flight data 
-    [800, 14, 15, 1, 2, 0],
+[1200, 8, 10, 0, 1, 1], // example data could be housing or flight
+[800, 14, 15, 1, 2, 0],
+[950, 10, 12, 1, 1, 0],
+[1000, 9, 11, 0, 0, 1],
+[1100, 13, 14, 0, 2, 1],
 ];
 const labels = [250, 180];  // Prices
 
