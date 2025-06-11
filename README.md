@@ -20,8 +20,15 @@ Fast, native Node.js bindings for XGBoost (Linux & MAC)
 
 ## Prerequisites
 - Linux OS or Mac OS
-- Node.js >= 14.0.0  
+- Node.js >= 14.0.0
+- python 3  
 - GCC/G++ compiler
+
+Sometimes you will need to install these python packages if not present on you system. 
+
+setuptools --	Builds/install Python packages, especially ones with C extensions
+distutils --	Legacy build helper, still assumed by some packages
+libomp --	Enables OpenMP support for multithreaded C++ libraries like XGBoost
 
 ## Installation
 ```bash
