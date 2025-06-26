@@ -1,6 +1,6 @@
 {
   "name": "xgboost_node",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Node.js bindings for XGBoost (Linux only)",
   "type": "module",
   "main": "dist/lib/xgboost.js",
@@ -27,7 +27,7 @@
     "test:air": "node dist/test/testair.js",
     "prepare": "git submodule update --init --recursive && npm run build",
     "release": "changeset publish",
-    "install": "npm run osdetect && node ./scripts/ConditionalBuild.js"
+    "install": "npm run osdetect "
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
